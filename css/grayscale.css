@@ -135,19 +135,27 @@ a:focus {
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0px;
+    padding: 0px 0px;
     text-align: center;
+    vertical-align: middle;
     color: #fff;
+}
+
+.intro .intro-pic {
+    display: table-cell;
+    padding:60px;
+    vertical-align: middle;
+    float:left;
 }
 
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
-    text-align: right;
+    float:top;
 }
 
 .intro .intro-body .brand-heading {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .intro .intro-body .intro-text {
@@ -161,7 +169,7 @@ a:focus {
     }
 
     .intro .intro-body .brand-heading {
-        font-size: 100px;
+        font-size: 80px;
     }
 
     .intro .intro-body .intro-text {
@@ -251,12 +259,6 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
 }
 
 #map {
