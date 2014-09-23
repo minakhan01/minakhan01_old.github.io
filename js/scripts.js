@@ -4,6 +4,7 @@ $('.row .thumbnail').on('load', function() {
   
 }).each(function(i) {
   if(this.complete) {
+    console.log("clicked clicked");
   	var item = $('<div class="item"></div>');
     var itemDiv = $(this).parents('div');
     var title = $(this).parent('a').attr("title");
