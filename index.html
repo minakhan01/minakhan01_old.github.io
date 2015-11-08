@@ -1,222 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+		<title>Ultimate 3D Carousel</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<!-- Imports required for the css and js files -->
+		<link rel="stylesheet" type="text/css" href="load/minimal_classic_skin.css"/>
+		<link rel="stylesheet" type="text/css" href="load/html_content.css"/>
+		<script type="text/javascript" src="java/FWDUltimate3DCarousel.js"></script>
+		
+		<!-- Setup the carousel (all settings are explained in detail in the documentation files) -->
+		<script type="text/javascript">
+			FWDU3DCarUtils.onReady(function(){
+				var carousel = new FWDUltimate3DCarousel({
+					//required settings
+					carouselHolderDivId:"myDiv",
+					carouselDataListDivId:"carouselData",
+					displayType:"fluidwidth",
+					autoScale:"yes",
+					carouselWidth:940,
+					carouselHeight:538,
+					skinPath:"load/minimal_classic_skin",
+												
+					//main settings
+					backgroundColor:"#000000",
+					backgroundImagePath:"",
+					thumbnailsBackgroundImagePath:"",
+					scrollbarBackgroundImagePath:"load/minimal_classic_skin/scrollbarBackground.jpg",
+					backgroundRepeat:"repeat-x",
+					carouselStartPosition:"center",
+					carouselTopology:"normal",
+					carouselXRadius:600,
+					carouselYRadius:0,
+					carouselXRotation:10,
+					carouselYOffset:0,
+					showCenterImage:"no",
+					centerImagePath:"load/logo.png",
+					centerImageYOffset:0,
+					showDisplay2DAlways:"no",
+					slideshowDelay:5000,
+					autoplay:"no",
+					showPrevButton:"no",
+					showNextButton:"no",
+					showSlideshowButton:"no",
+					disableNextAndPrevButtonsOnMobile:"no",
+					controlsMaxWidth:940,
+					controlsHeight:29,
+					controlsPosition:"bottom",
+					slideshowTimerColor:"#000000",
+					rightClickContextMenu:"developer",
+					addKeyboardSupport:"yes",
+					fluidWidthZIndex:1000,
+												
+					//thumbnail settings
+					thumbnailWidth:500,
+					thumbnailHeight:500,
+					thumbnailBorderSize:0,
+					thumbnailMinimumAlpha:.3,
+					thumbnailBackgroundColor:"#FFFFFF",
+					thumbnailBorderColor1:"#FFFFFF",
+					thumbnailBorderColor2:"#FFFFFF",
+					transparentImages:"no",
+					maxNumberOfThumbnailsOnMobile:13,
+					showThumbnailsGradient:"yes",
+					showThumbnailsHtmlContent:"no",
+					textBackgroundColor:"#FFFFFF",
+					textBackgroundOpacity:.7,
+					showText:"yes",
+					showTextBackgroundImage:"no",
+					showFullTextWithoutHover:"no",
+					showThumbnailBoxShadow:"yes",
+					thumbnailBoxShadowCss:"0px 2px 2px #111111",
+					showReflection:"yes",
+					reflectionHeight:60,
+					reflectionDistance:0,
+					reflectionOpacity:.2,
+												
+					// //scrollbar settings
+					// showScrollbar:"no",
+					// disableScrollbarOnMobile:"no",
+					// enableMouseWheelScroll:"no",
+					// scrollbarHandlerWidth:300,
+					// scrollbarTextColorNormal:"#000000",
+					// scrollbarTextColorSelected:"#FFFFFF",
+												
+					//combobox settings
+					showComboBox:"no",
+					startAtCategory:1,
+					selectLabel:"SELECT CATEGORIES",
+					allCategoriesLabel:"All Categories",
+					showAllCategories:"no",
+					comboBoxPosition:"topright",
+					selectorBackgroundNormalColor1:"#FFFFFF",
+					selectorBackgroundNormalColor2:"#FFFFFF",
+					selectorBackgroundSelectedColor1:"#000000",
+					selectorBackgroundSelectedColor2:"#000000",
+					selectorTextNormalColor:"#000000",
+					selectorTextSelectedColor:"#FFFFFF",
+					buttonBackgroundNormalColor1:"#FFFFFF",
+					buttonBackgroundNormalColor2:"#FFFFFF",
+					buttonBackgroundSelectedColor1:"#000000",
+					buttonBackgroundSelectedColor2:"#000000",
+					buttonTextNormalColor:"#000000",
+					buttonTextSelectedColor:"#FFFFFF",
+					comboBoxShadowColor:"#222222",
+					comboBoxHorizontalMargins:12,
+					comboBoxVerticalMargins:12,
+					comboBoxCornerRadius:0,
+												
 
-<head>
+				});	
+			});
+		</script>
+	</head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<body bgcolor="#000000">
+		<!-- div used as a holder for the carousel -->
+		<div id="myDiv"></div>
 
-    <title>Mina Khan</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-    <link href="css/flipper.css" rel="stylesheet">
-    <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- insert in the document head -->
-
-<script type='text/javascript'>
-
-  function embedPDF(){
-
-    var myPDF = new PDFObject({ 
-
-      url: 'https://github.com/minakhan01/minakhan01.github.io/blob/master/Resume_MinaKhan.pdf'
-
-    }).embed();  
-
-  }
-
-  window.onload = embedPDF; //Feel free to replace window.onload if needed.
-
-</script>
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a href="Resume_MinaKhan.pdf" class="btn btn-default btn-lg" target="_blank">
-                      <span class="light">Resume</span> 
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#experiences">Experiences</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Intro Header -->
-    <header class="intro">
-            <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <p><img src="img/profile.png" style="margin: 60px 0px 0px 0px"></p>
-                        <h1 class="brand-heading">Mina Khan</h1>
-                        <div class="intro-text">Mathematics, Physics and Computer Science major<br>Mount Holyoke College Class of 2015</div>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Me</h2>
-                <p>I use my curiosity, limitless energy, and knowledge of mathematics, physics and computer science to find innovative solutions to challenging problems.
-                </p>
-                <p><u><font color="#CCFFCC">Scholarships:</u></b></font> Google Anita Borg Memorial Scholarship (‘14); Grace Hopper Conference Scholarship. (‘14)</p>
-<p><u><font color="#CCFFCC"> Awards and Honors:</u></font> Sigma Pi Sigma (2014); Sarah Williston Prize for highest ranked students ('13); Sarah Williston Scholar- top 15% of class ('13); Bennett Prize for Excellence in Physics ('12); Mildred L Sanderson Prize for Excellence in Mathematics ('12).
-</p>
-                 <a href="#experiences" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experiences Section -->
-    <section id="experiences" class="content-section text-center">
-            <div class="container">
-                    <h2>Experiences</h2>
-                            <!-- Projects Row -->
-        
-<div class="container">
-    <div class="row">
-      <div class="col-md-3 col-xs-3 portfolio-item"><a title="Image 1"><img src="img/MediaLab.png" class="img-responsive thumbnail"></a></div>
-      <div class="col-md-3 col-xs-3 portfolio-item "><img src="img/Udacity_Logo.svg.png" class="img-responsive thumbnail"></div>
-      <div class="col-md-3 col-xs-3 portfolio-item"><img src="img/csail_logo.png" class="img-responsive thumbnail"></div>
-      <div class="col-md-3 col-xs-3 portfolio-item"><img src="img/robotics.png" class="img-responsive thumbnail"></div>
-      <div class="col-md-3 col-xs-3 portfolio-item"><img src="img/spmlogo.png" class="img-responsive thumbnail"></div>
-      <div class="col-md-3 col-xs-3 portfolio-item"><img src="img/NCAR.jpg" class="img-responsive thumbnail"></div>
-      <div class="col-md-3 col-xs-3 portfolio-item"><img src="img/MUN1.png" class="img-responsive thumbnail"></div>
-      <div class="col-md-3 col-xs-3 portfolio-item"><img src="img/LP.jpg" class="img-responsive thumbnail"></div>
-      </div>
-    
-  </div>
-  <font color="black">
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3 class="modal-title">Experiences</h3>
-    </div>
-    <div class="modal-body">
-        1. <b> Just-in-time learning using Google Glass at MIT Media Lab</b> (August 2014- present) <br>
-        2. <b> Course Manager at Udacity</b> (May 2014- present)  <br>
-    3. <b> Gröbner Bases for Polynomial Systems in Roboticsat MIT Computer Science and Artificial Intelligence Laboratory </b>(June - August 2014)<br>
-4. <b>Swarm Robotics for Multi-Robot Formations at Mount Holyoke College</b> (Sept 2013- June 2014) <br>
-5. <b>Ferromagnetic Nanostructures for Magnetic Memory Devices at Mount Holyoke College</b> (May 2012-May 2014) <br>
-6. <b>Analyze Joule Heating using Defense Meteorological Satellite Program data at National Center for Atmospheric Research</b> (June-August 2013) <br>
-7. <b>Secretary General at Five College Model United V </b> (May 2012-May 2012)<br>
-8. <b>USA Chapter Head of Literaty Pakistan</b> (September 2012-May 2014)<br>
-    </div>
-   </div>
-</font>
-  </div>
-</div>
-
-
-
-
-<a href="#contact" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                </a>
-                </div>
-            </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Me</h2>
-                <p>Feel free to email me to collaborate on interesting projects!</p>
-                <p><a href="mailto:minakhan01@gmail.com">minakhan01@gmail.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://linkedin.com/pub/mina-khan/32/135/921/" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/minakhan01" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/113930775987556499939/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-        </div>
-    </footer>
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-
-    <script src="js/grayscale.js"></script>
-    <script src="js/scripts.js"></script>
-
-</body>
-
+		<!-- carousel data -->
+		<div id="carouselData" style="display: none;">
+			
+			<!-- image datalist category 1 -->
+			<ul data-cat="Category one">
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/1.jpg"></li>
+					<li data-thumbnail-text="" data-thumbnail-text-title-offset="35"
+					data-thumbnail-text-offset-top="10" data-thumbnail-text-offset-bottom="7">
+						<p class="largeLabel">CUSTOM PRESS THUMBNAIL ACTION</p>
+						<p class="smallLabel">When a thumbnail is pressed the carousel can open a browser window
+						or the lightbox, also if HTML content is used the lightbox can be disabled this way links
+						or interactive html tags can be used.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOM PRESS THUMBNAIL ACTION.</p>
+						<p class="mediaDescriptionText">When a thumbnail is pressed you can choose
+						either to display an original media lightbox which we have coded, or to open a new webpage,
+						the url and target of this webpage can be specified. The lightbox can display images,
+						iframe or videos loaded from YouTube or Vimeo. Also you can set up one or more
+						thumbnails so that a new browser page will be opened when they are pressed. The URL and
+						target for this page can be customized, also if HTML content is used the lightbox can be
+						disabled this way links or interactive html tags can be used.</p>
+					</li>
+				</ul>
+			
+				<ul>
+					<li data-type="media" data-url="load/images/2.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/2.jpg"></li>
+					<li data-thumbnail-text="" data-thumbnail-text-title-offset="35"
+					data-thumbnail-text-offset-top="10" data-thumbnail-text-offset-bottom="7">
+						<p class="largeLabel">RESPONSIVE LAYOUT</p>
+						<p class="smallLabel">The carousel has responsive layout.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">RESPONSIVE LAYOUT.</p>
+						<p class="mediaDescriptionText">The carousel has responsive layout, basically
+						it has an adaptable layout which makes it the perfect candidate for any type of project.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="http://vimeo.com/84577359"></li>
+					<li data-thumbnail-path="load/thumbnails/3.jpg"></li>
+					<li data-thumbnail-text="" data-thumbnail-text-title-offset="35"
+					data-thumbnail-text-offset-top="10" data-thumbnail-text-offset-bottom="7">
+						<p class="largeLabel">2D FALLBACK FOR OLDER BROWSERS IE7/8</p>
+						<p class="smallLabel">On a older browser that does not have 3D support the carousel will
+						display in a 2D format.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">2D FALLBACK FOR OLDER BROWSERS IE7/8.</p>
+						<p class="mediaDescriptionText">On a older browser that does not have 3D support
+						the carousel will display in a 2D format.</p>
+					</li>
+				</ul>
+				
+			</ul>
+			<!-- end  -->			
+		</div>
+		
+	</body>
 </html>
+
+
+
+
