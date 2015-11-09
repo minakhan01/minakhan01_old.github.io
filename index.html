@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ultimate 3D Carousel</title>
-		
+		<title>Mina Khan</title>
+		<title>Mina Khan </title>
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		
 		<!-- Imports required for the css and js files -->
 		<link rel="stylesheet" type="text/css" href="load/minimal_classic_skin.css"/>
 		<link rel="stylesheet" type="text/css" href="load/html_content.css"/>
+		<!--Main Elements CSS-->
+		<!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
 		<script type="text/javascript" src="java/FWDUltimate3DCarousel.js"></script>
 		
 		<!-- Setup the carousel (all settings are explained in detail in the documentation files) -->
@@ -24,7 +45,7 @@
 					skinPath:"load/minimal_classic_skin",
 												
 					//main settings
-					backgroundColor:"#000000",
+					backgroundColor:"#ffffff",
 					backgroundImagePath:"",
 					thumbnailsBackgroundImagePath:"",
 					scrollbarBackgroundImagePath:"load/minimal_classic_skin/scrollbarBackground.jpg",
@@ -55,7 +76,7 @@
 												
 					//thumbnail settings
 					thumbnailWidth:500,
-					thumbnailHeight:500,
+					thumbnailHeight:450,
 					thumbnailBorderSize:0,
 					thumbnailMinimumAlpha:.3,
 					thumbnailBackgroundColor:"#FFFFFF",
@@ -71,7 +92,7 @@
 					showTextBackgroundImage:"no",
 					showFullTextWithoutHover:"no",
 					showThumbnailBoxShadow:"yes",
-					thumbnailBoxShadowCss:"0px 2px 2px #111111",
+					thumbnailBoxShadowCss:"0px 2px 2px #ffffff",
 					showReflection:"yes",
 					reflectionHeight:60,
 					reflectionDistance:0,
@@ -115,7 +136,24 @@
 		</script>
 	</head>
 
-	<body bgcolor="#000000">
+	<body background-color="#ffffff">
+
+		<!--Header Start-->
+        <header bgcolor="#ffffff">
+        	<div class="container">
+            
+            	<!--Logo Start-->
+        		<div class="logo">
+                	<a href="index.html">
+                    	<img src="header.png" alt="logo" style="display:block;margin:auto;"/>
+                    </a>
+                </div>
+                <!--Logo End-->
+                
+            </div>
+        </header>
+        <!--Header End-->
+
 		<!-- div used as a holder for the carousel -->
 		<div id="myDiv"></div>
 
@@ -125,39 +163,20 @@
 			<!-- image datalist category 1 -->
 			<ul data-cat="Category one">
 				<ul>
-					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
-					<li data-thumbnail-path="load/thumbnails/1.jpg"></li>
+					<li data-type="link" data-url="http://www.khanmina.com" data-target="_blank"></li>
+					<li data-thumbnail-path="proposal3.png"></li>
 					<li data-thumbnail-text="" data-thumbnail-text-title-offset="35"
 					data-thumbnail-text-offset-top="10" data-thumbnail-text-offset-bottom="7">
-						<p class="largeLabel">CUSTOM PRESS THUMBNAIL ACTION</p>
-						<p class="smallLabel">When a thumbnail is pressed the carousel can open a browser window
-						or the lightbox, also if HTML content is used the lightbox can be disabled this way links
-						or interactive html tags can be used.</p>
-					</li>
-					<li data-info="">
-						<p class="mediaDescriptionHeader">CUSTOM PRESS THUMBNAIL ACTION.</p>
-						<p class="mediaDescriptionText">When a thumbnail is pressed you can choose
-						either to display an original media lightbox which we have coded, or to open a new webpage,
-						the url and target of this webpage can be specified. The lightbox can display images,
-						iframe or videos loaded from YouTube or Vimeo. Also you can set up one or more
-						thumbnails so that a new browser page will be opened when they are pressed. The URL and
-						target for this page can be customized, also if HTML content is used the lightbox can be
-						disabled this way links or interactive html tags can be used.</p>
+						<p class="largeLabel" style="text-align:center;"><b>RESUME AND PORTFOLIO</b></p>
 					</li>
 				</ul>
 			
 				<ul>
-					<li data-type="media" data-url="load/images/2.jpg"></li>
-					<li data-thumbnail-path="load/thumbnails/2.jpg"></li>
+					<li data-type="link" data-url="http://mina-khan.com/research.html" data-target="_blank"></li>
+					<li data-thumbnail-path="proposal2.png"></li>
 					<li data-thumbnail-text="" data-thumbnail-text-title-offset="35"
 					data-thumbnail-text-offset-top="10" data-thumbnail-text-offset-bottom="7">
-						<p class="largeLabel">RESPONSIVE LAYOUT</p>
-						<p class="smallLabel">The carousel has responsive layout.</p>
-					</li>
-					<li data-info="">
-						<p class="mediaDescriptionHeader">RESPONSIVE LAYOUT.</p>
-						<p class="mediaDescriptionText">The carousel has responsive layout, basically
-						it has an adaptable layout which makes it the perfect candidate for any type of project.</p>
+						<p class="largeLabel" style="text-align:center;"><b>RESEARCH PROPOSAL</b></p>
 					</li>
 				</ul>
 				
@@ -166,14 +185,7 @@
 					<li data-thumbnail-path="load/thumbnails/3.jpg"></li>
 					<li data-thumbnail-text="" data-thumbnail-text-title-offset="35"
 					data-thumbnail-text-offset-top="10" data-thumbnail-text-offset-bottom="7">
-						<p class="largeLabel">2D FALLBACK FOR OLDER BROWSERS IE7/8</p>
-						<p class="smallLabel">On a older browser that does not have 3D support the carousel will
-						display in a 2D format.</p>
-					</li>
-					<li data-info="">
-						<p class="mediaDescriptionHeader">2D FALLBACK FOR OLDER BROWSERS IE7/8.</p>
-						<p class="mediaDescriptionText">On a older browser that does not have 3D support
-						the carousel will display in a 2D format.</p>
+						<p class="largeLabel" style="text-align:center;"><b>NEW PROJECTS BLOG</b></p>
 					</li>
 				</ul>
 				
